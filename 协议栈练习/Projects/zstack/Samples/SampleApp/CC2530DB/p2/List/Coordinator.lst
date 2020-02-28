@@ -1,0 +1,579 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         25/Dec/2017  21:07:51 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\yzk\Desktop\实训10                        #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\Source\Coordinator.c                       #
+#    Command line       =  -f "C:\Users\yzk\Desktop\实训10                    #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord. #
+#                          cfg" (-DCPU32MHZ -DROOT=__near_func                #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f "C:\Users\yzk\Desktop\实训10                    #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig #
+#                          .cfg" (-DZIGBEEPRO -DSECURE=0                      #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 "C:\Users\yzk\Desktop\实训1 #
+#                          0 基于Z-Stack的点对点通信\Projects\zstack\Samples\ #
+#                          SampleApp\Source\Coordinator.c" -D ZTOOL_P1 -D     #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC "C:\Users\yzk\Desktop\实训 #
+#                          10 基于Z-Stack的点对点通信\Projects\zstack\Samples #
+#                          \SampleApp\CC2530DB\p2\List\" -lA                  #
+#                          "C:\Users\yzk\Desktop\实训10                       #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\p2\List\" --diag_suppress         #
+#                          Pe001,Pa010 -o "C:\Users\yzk\Desktop\实训10        #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\p2\Obj\" -e --no_code_motion      #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "C:\Users\yzk\Desktop\实训10                    #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\" -I "C:\Users\yzk\Desktop\实训10 #
+#                           基于Z-Stack的点对点通信\Projects\zstack\Samples\S #
+#                          ampleApp\CC2530DB\..\Source\" -I                   #
+#                          "C:\Users\yzk\Desktop\实训10                       #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\ZMain\TI2530DB\" -I      #
+#                          "C:\Users\yzk\Desktop\实训10                       #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\hal\inc #
+#                          lude\" -I "C:\Users\yzk\Desktop\实训10             #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\hal\tar #
+#                          get\CC2530EB\" -I "C:\Users\yzk\Desktop\实训10     #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\mac\inc #
+#                          lude\" -I "C:\Users\yzk\Desktop\实训10             #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\mac\hig #
+#                          h_level\" -I "C:\Users\yzk\Desktop\实训10          #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\mac\low #
+#                          _level\srf04\" -I "C:\Users\yzk\Desktop\实训10     #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\mac\low #
+#                          _level\srf04\single_chip\" -I                      #
+#                          "C:\Users\yzk\Desktop\实训10                       #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\mt\"    #
+#                          -I "C:\Users\yzk\Desktop\实训10                    #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\osal\in #
+#                          clude\" -I "C:\Users\yzk\Desktop\实训10            #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\service #
+#                          s\saddr\" -I "C:\Users\yzk\Desktop\实训10          #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\service #
+#                          s\sdata\" -I "C:\Users\yzk\Desktop\实训10          #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\a #
+#                          f\" -I "C:\Users\yzk\Desktop\实训10                #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\n #
+#                          wk\" -I "C:\Users\yzk\Desktop\实训10               #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          api\" -I "C:\Users\yzk\Desktop\实训10              #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          ec\" -I "C:\Users\yzk\Desktop\实训10               #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\s #
+#                          ys\" -I "C:\Users\yzk\Desktop\实训10               #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\stack\z #
+#                          do\" -I "C:\Users\yzk\Desktop\实训10               #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\zmac\"  #
+#                          -I "C:\Users\yzk\Desktop\实训10                    #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8 #
+#                          w\" -Ohz --require_prototypes                      #
+#    List file          =  C:\Users\yzk\Desktop\实训10                        #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\p2\List\Coordinator.lst           #
+#    Object file        =  C:\Users\yzk\Desktop\实训10                        #
+#                          基于Z-Stack的点对点通信\Projects\zstack\Samples\Sa #
+#                          mpleApp\CC2530DB\p2\Obj\Coordinator.r51            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\yzk\Desktop\实训10 基于Z-Stack的点对点通信\Projects\zstack\Samples\SampleApp\Source\Coordinator.c
+      1          #include "OSAL.h"
+      2          #include "ZGlobals.h"
+      3          #include "AF.h"
+      4          #include "ZDApp.h"
+      5          
+      6          #include "Coordinator.h"
+      7          
+      8          #include "OnBoard.h"
+      9          #include "hal_lcd.h"
+     10          #include "hal_led.h"
+     11          #include "hal_key.h"
+     12          // This list should be filled with Application specific Cluster IDs.
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     13          const cId_t SampleApp_ClusterList[SAMPLEAPP_MAX_CLUSTERS] =
+   \                     SampleApp_ClusterList:
+   \   000000   0100         DW 1
+   \   000002   0000         DW 0
+     14          {
+     15            SAMPLEAPP_PERIODIC_CLUSTERID
+     16          };
+     17          //用来描述一个ZigBee设备节点，称为简单设备描述符
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     18          const SimpleDescriptionFormat_t SampleApp_SimpleDesc =
+   \                     SampleApp_SimpleDesc:
+   \   000000   14           DB 20
+   \   000001   080F         DW 3848
+   \   000003   0100         DW 1
+   \   000005   00           DB 0
+   \   000006   02           DB 2
+   \   000007   ....         DW SampleApp_ClusterList
+   \   000009   00           DB 0
+   \   00000A   0000         DW 0H
+     19          {
+     20            SAMPLEAPP_ENDPOINT,              //  int Endpoint;
+     21            SAMPLEAPP_PROFID,                //  uint16 AppProfId[2];
+     22            SAMPLEAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+     23            SAMPLEAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+     24            SAMPLEAPP_FLAGS,                 //  int   AppFlags:4;
+     25            SAMPLEAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+     26            (cId_t *)SampleApp_ClusterList,  //  uint8 *pAppInClusterList;
+     27            0,           
+     28            (cId_t *)NULL    
+     29          };
+     30          // This is the Endpoint/Interface description.  It is defined here, but
+     31          // filled-in in SampleApp_Init().  Another way to go would be to fill
+     32          // in the structure here and make it a "const" (in code space).  The
+     33          // way it's defined in this sample app it is define in RAM.
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     34          endPointDesc_t SampleApp_epDesc;  //节点描述符
+   \                     SampleApp_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     35          uint8 SampleApp_TaskID;           //任务优先级
+   \                     SampleApp_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     36          uint8 SampleApp_TransID;          //数据发送序列号
+   \                     SampleApp_TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     37          /*********************************************************************
+     38           * LOCAL FUNCTIONS
+     39           */
+     40          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );//声明消息处理函数
+     41          /*********************************************************************
+     42           * NETWORK LAYER CALLBACKS
+     43           */
+     44          
+     45          /*********************************************************************
+     46           * PUBLIC FUNCTIONS
+     47           */
+     48          
+     49          /*********************************************************************
+     50           * @fn      SampleApp_Init
+     51           *
+     52           * @brief   Initialization function for the Generic App Task.
+     53           *          This is called during initialization and should contain
+     54           *          any application specific initialization (ie. hardware
+     55           *          initialization/setup, table initialization, power up
+     56           *          notificaiton ... ).
+     57           *
+     58           * @param   task_id - the ID assigned by OSAL.  This ID should be
+     59           *                    used to send messages and set timers.
+     60           *
+     61           * @return  none
+     62           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     63          void SampleApp_Init( uint8 task_id )
+   \                     SampleApp_Init:
+     64          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+     65            SampleApp_TaskID = task_id;
+   \   000006   90....       MOV     DPTR,#SampleApp_TaskID
+   \   000009   F0           MOVX    @DPTR,A
+     66            SampleApp_TransID = 0;
+   \   00000A   90....       MOV     DPTR,#SampleApp_TransID
+   \   00000D   E4           CLR     A
+   \   00000E   F0           MOVX    @DPTR,A
+     67            
+     68            // Fill out the endpoint description.
+     69            SampleApp_epDesc.endPoint = SAMPLEAPP_ENDPOINT;
+   \   00000F   90....       MOV     DPTR,#SampleApp_epDesc
+   \   000012   7414         MOV     A,#0x14
+   \   000014   F0           MOVX    @DPTR,A
+     70            SampleApp_epDesc.task_id = &SampleApp_TaskID;
+   \   000015   A3           INC     DPTR
+   \   000016   74..         MOV     A,#SampleApp_TaskID & 0xff
+   \   000018   F0           MOVX    @DPTR,A
+   \   000019   A3           INC     DPTR
+   \   00001A   74..         MOV     A,#(SampleApp_TaskID >> 8) & 0xff
+   \   00001C   F0           MOVX    @DPTR,A
+     71            SampleApp_epDesc.simpleDesc
+     72                      = (SimpleDescriptionFormat_t *)&SampleApp_SimpleDesc;
+   \   00001D   A3           INC     DPTR
+   \   00001E   74..         MOV     A,#SampleApp_SimpleDesc & 0xff
+   \   000020   F0           MOVX    @DPTR,A
+   \   000021   A3           INC     DPTR
+   \   000022   74..         MOV     A,#(SampleApp_SimpleDesc >> 8) & 0xff
+   \   000024   F0           MOVX    @DPTR,A
+     73            SampleApp_epDesc.latencyReq = noLatencyReqs;
+   \   000025   A3           INC     DPTR
+   \   000026   E4           CLR     A
+   \   000027   F0           MOVX    @DPTR,A
+     74          
+     75            // Register the endpoint description with the AF
+     76            afRegister( &SampleApp_epDesc );
+   \   000028                ; Setup parameters for call to function afRegister
+   \   000028   7A..         MOV     R2,#SampleApp_epDesc & 0xff
+   \   00002A   7B..         MOV     R3,#(SampleApp_epDesc >> 8) & 0xff
+   \   00002C   12....       LCALL   ??afRegister?relay
+     77          }
+   \   00002F   7F01         MOV     R7,#0x1
+   \   000031   02....       LJMP    ?BANKED_LEAVE_XDATA
+     78          /*********************************************************************
+     79           * @fn      SampleApp_ProcessEvent
+     80           *
+     81           * @brief   Generic Application Task event processor.  This function
+     82           *          is called to process all events for the task.  Events
+     83           *          include timers, messages and any other user defined events.
+     84           *
+     85           * @param   task_id  - The OSAL assigned task ID.
+     86           * @param   events - events to process.  This is a bit map and can
+     87           *                   contain more than one event.
+     88           *
+     89           * @return  none
+     90           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     91          uint16 SampleApp_ProcessEvent( uint8 task_id, uint16 events )
+   \                     SampleApp_ProcessEvent:
+     92          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+     93            afIncomingMSGPacket_t *MSGpkt;
+     94          
+     95            if ( events & SYS_EVENT_MSG )
+   \   000009   EB           MOV     A,R3
+   \   00000A   5480         ANL     A,#0x80
+   \   00000C   6036         JZ      ??SampleApp_ProcessEvent_0
+     96            {
+     97              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+   \   00000E                ; Setup parameters for call to function osal_msg_receive
+   \   00000E   8017         SJMP    ??SampleApp_ProcessEvent_1
+     98              while ( MSGpkt )
+     99              {
+    100                switch ( MSGpkt->hdr.event )
+   \                     ??SampleApp_ProcessEvent_2:
+   \   000010   8E82         MOV     DPL,R6
+   \   000012   8F83         MOV     DPH,R7
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   641A         XRL     A,#0x1a
+   \   000017   7007         JNZ     ??SampleApp_ProcessEvent_3
+    101                {
+    102                  // Received when a messages is received (OTA) for this endpoint
+    103                  case AF_INCOMING_MSG_CMD:
+    104                    SampleApp_MessageMSGCB( MSGpkt );
+   \   000019                ; Setup parameters for call to function SampleApp_MessageMSGCB
+   \   000019   EE           MOV     A,R6
+   \   00001A   FA           MOV     R2,A
+   \   00001B   EF           MOV     A,R7
+   \   00001C   FB           MOV     R3,A
+   \   00001D   12....       LCALL   ??SampleApp_MessageMSGCB?relay
+    105                    break;
+    106          
+    107                  default:
+    108                    break;
+    109                }
+    110          
+    111                // Release the memory
+    112                osal_msg_deallocate( (uint8 *)MSGpkt );
+   \                     ??SampleApp_ProcessEvent_3:
+   \   000020                ; Setup parameters for call to function osal_msg_deallocate
+   \   000020   EE           MOV     A,R6
+   \   000021   FA           MOV     R2,A
+   \   000022   EF           MOV     A,R7
+   \   000023   FB           MOV     R3,A
+   \   000024   12....       LCALL   ??osal_msg_deallocate?relay
+    113          
+    114                // Next - if one is available
+    115                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( SampleApp_TaskID );
+   \   000027                ; Setup parameters for call to function osal_msg_receive
+   \                     ??SampleApp_ProcessEvent_1:
+   \   000027   90....       MOV     DPTR,#SampleApp_TaskID
+   \   00002A   E0           MOVX    A,@DPTR
+   \   00002B   F9           MOV     R1,A
+   \   00002C   12....       LCALL   ??osal_msg_receive?relay
+   \   00002F   8A..         MOV     ?V0 + 2,R2
+   \   000031   8B..         MOV     ?V0 + 3,R3
+   \   000033   AE..         MOV     R6,?V0 + 2
+   \   000035   AF..         MOV     R7,?V0 + 3
+    116              }
+   \   000037   EE           MOV     A,R6
+   \   000038   4F           ORL     A,R7
+   \   000039   70D5         JNZ     ??SampleApp_ProcessEvent_2
+    117          
+    118              // return unprocessed events
+    119              return (events ^ SYS_EVENT_MSG);
+   \   00003B   AA..         MOV     R2,?V0 + 0
+   \   00003D   E5..         MOV     A,?V0 + 1
+   \   00003F   6480         XRL     A,#0x80
+   \   000041   FB           MOV     R3,A
+   \   000042   8004         SJMP    ??SampleApp_ProcessEvent_4
+    120            }
+    121            // Discard unknown events
+    122            return 0;
+   \                     ??SampleApp_ProcessEvent_0:
+   \   000044   7A00         MOV     R2,#0x0
+   \   000046   7B00         MOV     R3,#0x0
+   \                     ??SampleApp_ProcessEvent_4:
+   \   000048   7F04         MOV     R7,#0x4
+   \   00004A   02....       LJMP    ?BANKED_LEAVE_XDATA
+    123          }
+    124          /*********************************************************************
+    125           * LOCAL FUNCTIONS
+    126           */
+    127          
+    128          /*********************************************************************
+    129           * @fn      SampleApp_MessageMSGCB
+    130           *
+    131           * @brief   Data message processor callback.  This function processes
+    132           *          any incoming data - probably from other devices.  So, based
+    133           *          on cluster ID, perform the intended action.
+    134           *
+    135           * @param   none
+    136           *
+    137           * @return  none
+    138           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    139          void SampleApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+   \                     SampleApp_MessageMSGCB:
+    140          {
+   \   000000   74F5         MOV     A,#-0xb
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 6
+   \   000005   74FA         MOV     A,#-0x6
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    141            unsigned char buffer[6]=" ";
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant " ">` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant " ">` & 0xff
+   \   00001A   7406         MOV     A,#0x6
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    142          
+    143            switch ( pkt->clusterId )
+   \   00001F   8A82         MOV     DPL,R2
+   \   000021   8B83         MOV     DPH,R3
+   \   000023   A3           INC     DPTR
+   \   000024   A3           INC     DPTR
+   \   000025   A3           INC     DPTR
+   \   000026   A3           INC     DPTR
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   6401         XRL     A,#0x1
+   \   00002A   7002         JNZ     ??SampleApp_MessageMSGCB_0
+   \   00002C   A3           INC     DPTR
+   \   00002D   E0           MOVX    A,@DPTR
+   \                     ??SampleApp_MessageMSGCB_0:
+   \   00002E   7063         JNZ     ??SampleApp_MessageMSGCB_1
+    144            {
+    145              case SAMPLEAPP_PERIODIC_CLUSTERID:
+    146                osal_memcpy(buffer,pkt->cmd.Data,6);
+   \   000030                ; Setup parameters for call to function osal_memcpy
+   \   000030   EA           MOV     A,R2
+   \   000031   2422         ADD     A,#0x22
+   \   000033   F582         MOV     DPL,A
+   \   000035   EB           MOV     A,R3
+   \   000036   3400         ADDC    A,#0x0
+   \   000038   F583         MOV     DPH,A
+   \   00003A   E0           MOVX    A,@DPTR
+   \   00003B   F5..         MOV     ?V0 + 0,A
+   \   00003D   A3           INC     DPTR
+   \   00003E   E0           MOVX    A,@DPTR
+   \   00003F   F5..         MOV     ?V0 + 1,A
+   \   000041   75..00       MOV     ?V0 + 2,#0x0
+   \   000044   78..         MOV     R0,#?V0 + 0
+   \   000046   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   000049   7C06         MOV     R4,#0x6
+   \   00004B   7D00         MOV     R5,#0x0
+   \   00004D   7403         MOV     A,#0x3
+   \   00004F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000052   AA82         MOV     R2,DPL
+   \   000054   AB83         MOV     R3,DPH
+   \   000056   12....       LCALL   ??osal_memcpy?relay
+   \   000059   7403         MOV     A,#0x3
+   \   00005B   12....       LCALL   ?DEALLOC_XSTACK8
+    147                if((buffer[0]=='L')||(buffer[1]=='E')||(buffer[2]=='D'))
+   \   00005E   85..82       MOV     DPL,?XSP + 0
+   \   000061   85..83       MOV     DPH,?XSP + 1
+   \   000064   E0           MOVX    A,@DPTR
+   \   000065   644C         XRL     A,#0x4c
+   \   000067   6014         JZ      ??SampleApp_MessageMSGCB_2
+   \   000069   7401         MOV     A,#0x1
+   \   00006B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006E   E0           MOVX    A,@DPTR
+   \   00006F   6445         XRL     A,#0x45
+   \   000071   600A         JZ      ??SampleApp_MessageMSGCB_2
+   \   000073   7402         MOV     A,#0x2
+   \   000075   12....       LCALL   ?XSTACK_DISP0_8
+   \   000078   E0           MOVX    A,@DPTR
+   \   000079   6444         XRL     A,#0x44
+   \   00007B   700F         JNZ     ??SampleApp_MessageMSGCB_3
+    148                {
+    149                  HalLedBlink( HAL_LED_2, 0, 50, 500 );
+   \                     ??SampleApp_MessageMSGCB_2:
+   \   00007D                ; Setup parameters for call to function HalLedBlink
+   \   00007D   7CF4         MOV     R4,#-0xc
+   \   00007F   7D01         MOV     R5,#0x1
+   \   000081   7B32         MOV     R3,#0x32
+   \   000083   7A00         MOV     R2,#0x0
+   \   000085   7902         MOV     R1,#0x2
+   \   000087   12....       LCALL   ??HalLedBlink?relay
+   \   00008A   8007         SJMP    ??SampleApp_MessageMSGCB_1
+    150                }
+    151                else
+    152                {
+    153                 HalLedSet( HAL_LED_2,HAL_LED_MODE_ON);         
+   \                     ??SampleApp_MessageMSGCB_3:
+   \   00008C                ; Setup parameters for call to function HalLedSet
+   \   00008C   7A01         MOV     R2,#0x1
+   \   00008E   7902         MOV     R1,#0x2
+   \   000090   12....       LCALL   ??HalLedSet?relay
+    154                }
+    155                break;
+    156                
+    157            default:
+    158              break;
+    159            }
+    160          }
+   \                     ??SampleApp_MessageMSGCB_1:
+   \   000093   7406         MOV     A,#0x6
+   \   000095   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000098   7F03         MOV     R7,#0x3
+   \   00009A   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SampleApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SampleApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SampleApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SampleApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SampleApp_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SampleApp_MessageMSGCB
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant " ">`:
+   \   000000   2000         DB " "
+   \   000002   00000000     DB 0, 0, 0, 0
+
+   Maximum stack usage in bytes:
+
+     Function                    ISTACK PSTACK XSTACK
+     --------                    ------ ------ ------
+     SampleApp_Init                  0      0      9
+       -> afRegister                 0      0     18
+     SampleApp_MessageMSGCB          2      0     32
+       -> osal_memcpy                0      0     40
+       -> HalLedBlink                0      0     34
+       -> HalLedSet                  0      0     34
+     SampleApp_ProcessEvent          0      0     12
+       -> osal_msg_receive           0      0     24
+       -> SampleApp_MessageMSGCB     0      0     24
+       -> osal_msg_deallocate        0      0     24
+       -> osal_msg_receive           0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label                 Bytes
+     --------------                 -----
+     SampleApp_ClusterList             4
+     SampleApp_SimpleDesc             12
+     SampleApp_epDesc                  6
+     SampleApp_TaskID                  1
+     SampleApp_TransID                 1
+     SampleApp_Init                   52
+     SampleApp_ProcessEvent           77
+     SampleApp_MessageMSGCB          157
+     ??SampleApp_Init?relay            6
+     ??SampleApp_ProcessEvent?relay    6
+     ??SampleApp_MessageMSGCB?relay    6
+     ?<Constant " ">                   6
+
+ 
+ 286 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+  22 bytes in segment XDATA_ROM_C
+   8 bytes in segment XDATA_Z
+ 
+ 304 bytes of CODE  memory
+  22 bytes of CONST memory
+   8 bytes of XDATA memory
+
+Errors: none
+Warnings: none

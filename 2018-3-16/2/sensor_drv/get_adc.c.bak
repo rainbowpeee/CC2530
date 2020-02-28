@@ -1,0 +1,54 @@
+/**************************************************************************************************
+  Filename:      sh10.c
+
+  Description:    sh10 driver 
+                  
+**************************************************************************************************/
+
+/******************************************************************************
+ * INCLUDES
+ */
+#include "ioCC2530.h"
+#include "hal_defs.h"
+#include "get_adc.h"
+
+#define BM(n)      (1 << (n))
+
+#define MCU_IO_TRISTATE   1             
+#define MCU_IO_PULLUP     2
+#define MCU_IO_PULLDOWN   3
+
+#define MCU_IO_OUTPUT(port, pin, val)  MCU_IO_OUTPUT_PREP(port, pin, val)
+#define MCU_IO_OUTPUT_PREP(port, pin, val)  st( P##port##SEL &= ~BM(pin); P##port##_##pin## = val; P##port##DIR |= BM(pin); )
+#define MCU_IO_INPUT(port, pin, func)  MCU_IO_INPUT_PREP(port, pin, func)
+#define MCU_IO_INPUT_PREP(port, pin, func)  st( P##port##SEL &= ~BM(pin); P##port##DIR &= ~BM(pin); switch (func) { case MCU_IO_PULLUP: P##port##INP &= ~BM(pin); P2INP &= ~BM(port + 5); break; case MCU_IO_PULLDOWN: P##port##INP &= ~BM(pin); P2INP |= BM(port + 5); break; default: P##port##INP |= BM(pin); break; } )
+#define MCU_IO_GET(port, pin)          MCU_IO_GET_PREP(port, pin)
+#define MCU_IO_GET_PREP(port, pin)          (P##port## & BM(pin))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

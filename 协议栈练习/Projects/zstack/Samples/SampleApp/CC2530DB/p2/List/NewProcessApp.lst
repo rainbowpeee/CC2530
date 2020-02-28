@@ -1,0 +1,742 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         02/Mar/2018  11:01:25 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\Source\NewProcessApp.c             #
+#    Command line       =  -f C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack #
+#                          \Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530D #
+#                          B\f8wCoord.cfg (-DCPU32MHZ -DROOT=__near_func      #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8         #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack #
+#                          \Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530D #
+#                          B\f8wConfig.cfg (-DZIGBEEPRO -DSECURE=0            #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0x0001                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\yzk\Desktop\–≠“È’ª #
+#                          ¡∑œ∞\Projects\zstack\Samples\SampleApp\Source\NewP #
+#                          rocessApp.c -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC  #
+#                          -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -D           #
+#                          HAL_UART=TRUE -lC C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\ #
+#                          Projects\zstack\Samples\SampleApp\CC2530DB\p2\List #
+#                          \ -lA C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zst #
+#                          ack\Samples\SampleApp\CC2530DB\p2\List\            #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\p2\Obj\ -e                #
+#                          --no_code_motion --debug --core=plain --dptr=16,1  #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack #
+#                          \Samples\SampleApp\CC2530DB\ -I                    #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\Source\ -I             #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\  #
+#                          -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack #
+#                          \Samples\SampleApp\CC2530DB\..\..\..\..\..\Compone #
+#                          nts\hal\include\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ #
+#                          ∞\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\Components\hal\target\CC2530EB\ -I       #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mac\include\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\P #
+#                          rojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. #
+#                          \..\..\Components\mac\high_level\ -I               #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mac\low_level\srf04\ -I                           #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mac\low_level\srf04\single_chip\ -I               #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \mt\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\z #
+#                          stack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Co #
+#                          mponents\osal\include\ -I                          #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \services\saddr\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ #
+#                          ∞\Projects\zstack\Samples\SampleApp\CC2530DB\..\.. #
+#                          \..\..\..\Components\services\sdata\ -I            #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \stack\af\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Proj #
+#                          ects\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. #
+#                          \..\Components\stack\nwk\ -I                       #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \stack\sapi\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Pr #
+#                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ #
+#                          ..\..\Components\stack\sec\ -I                     #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \stack\sys\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\. #
+#                          .\..\Components\stack\zdo\ -I                      #
+#                          C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\..\..\..\..\..\Components #
+#                          \zmac\ -I C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects #
+#                          \zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\ #
+#                          Components\zmac\f8w\ -Ohz --require_prototypes     #
+#    List file          =  C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\p2\List\NewProcessApp.lst #
+#    Object file        =  C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Sa #
+#                          mples\SampleApp\CC2530DB\p2\Obj\NewProcessApp.r51  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\yzk\Desktop\–≠“È’ª¡∑œ∞\Projects\zstack\Samples\SampleApp\Source\NewProcessApp.c
+      1          #include "OSAL.h"
+      2          #include "ZGlobals.h"
+      3          #include "AF.h"
+      4          #include "ZDApp.h"
+      5          
+      6          #include "NewProcessApp.h"
+      7          
+      8          #include "OnBoard.h"
+      9          #include "hal_lcd.h"
+     10          #include "hal_led.h"
+     11          #include "hal_key.h"
+     12          #include "hal_uart.h"//ÃÌº”uart.hŒƒº˛
+     13          // ¥À¡–±Ì”¶ÃÓ–¥Ãÿ∂®”⁄”¶”√≥Ã–Úµƒ»∫ºØID.
+     14          
+     15          //#define SEND_DATA_EVENT  0X01//ÃÌº”∂® ± ± ¬º˛
+     16          
+     17          
+     18          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     19          const cId_t NewProcessAPP_ClusterList[NEWPROCESSAPP_MAX_CLUSTERS] =
+   \                     NewProcessAPP_ClusterList:
+   \   000000   0100         DW 1
+   \   000002   0000         DW 0
+     20          {
+     21            NEWPROCESSAPP_PERIODIC_CLUSTERID
+     22          };
+     23          //”√¿¥√Ë ˆ“ª∏ˆZigBee…Ë±∏Ω⁄µ„£¨≥∆Œ™ºÚµ•…Ë±∏√Ë ˆ∑˚
+     24          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     25          const SimpleDescriptionFormat_t NewProcessAPP_SimpleDesc =
+   \                     NewProcessAPP_SimpleDesc:
+   \   000000   14           DB 20
+   \   000001   080F         DW 3848
+   \   000003   0100         DW 1
+   \   000005   00           DB 0
+   \   000006   02           DB 2
+   \   000007   ....         DW NewProcessAPP_ClusterList
+   \   000009   00           DB 0
+   \   00000A   0000         DW 0H
+     26          {
+     27            NEWPROCESSAPP_ENDPOINT,              //  int Endpoint;
+     28            NEWPROCESSAPP_PROFID,                //  uint16 AppProfId[2];
+     29            NEWPROCESSAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+     30            NEWPROCESSAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+     31            NEWPROCESSAPP_FLAGS,                 //  int   AppFlags:4;
+     32            NEWPROCESSAPP_MAX_CLUSTERS,          //  uint8  AppNumInClusters;
+     33            (cId_t *)NewProcessAPP_ClusterList,  //  uint8 *pAppInClusterList;
+     34            0,           
+     35            (cId_t *)NULL    
+     36          };
+     37          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     38          endPointDesc_t NewProcessAPP_epDesc;  //Ω⁄µ„√Ë ˆ∑˚
+   \                     NewProcessAPP_epDesc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     39          uint8 NewProcessAPP_TaskID;           //»ŒŒÒ”≈œ»º∂
+   \                     NewProcessAPP_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     40          uint8 NewProcessAPP_TransID;          // ˝æ›∑¢ÀÕ–Ú¡–∫≈
+   \                     NewProcessAPP_TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     41          unsigned char uartbuf[128];           //¥Æø⁄∑¢ÀÕª∫≥Â«¯
+   \                     uartbuf:
+   \   000000                DS 128
+   \   000080                REQUIRE __INIT_XDATA_Z
+     42          //******************************************************************************
+     43          void NewProcessAPP_MessageMSGCB( afIncomingMSGPacket_t *pckt );//…˘√˜œ˚œ¢¥¶¿Ì∫Ø ˝
+     44          void NewProcessAPP_SendTheMessage( void );                     // ˝æ›∑¢ÀÕ∫Ø ˝
+     45          void rxCB(uint8 port,uint8 event);                             //¥Æø⁄∑¢ÀÕ∫Ø ˝
+     46          void NewProcessAPP_key();
+     47          //******************************************************************************
+     48          
+     49          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     50          void NewProcessApp_Init( uint8 task_id )//»ŒŒÒ≥ı ºªØ∫Ø ˝
+   \                     NewProcessApp_Init:
+     51          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV     A,#-0x1d
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+     52            halUARTCfg_t uartConfig;                                   //*
+     53            NewProcessAPP_TaskID            = task_id;                  //≥ı ºªØ»ŒŒÒ”≈œ»º∂
+   \   00000B   90....       MOV     DPTR,#NewProcessAPP_TaskID
+   \   00000E   F0           MOVX    @DPTR,A
+     54            NewProcessAPP_TransID           = 0;                        //Ω´∑¢ÀÕ ˝æ›∞¸–Ú∫≈≥ı ºªØŒ™0
+   \   00000F   90....       MOV     DPTR,#NewProcessAPP_TransID
+   \   000012   E4           CLR     A
+   \   000013   F0           MOVX    @DPTR,A
+     55            
+     56            NewProcessAPP_epDesc.endPoint   = NEWPROCESSAPP_ENDPOINT;   //∂‘Ω⁄µ„√Ë ˆ∑˚Ω¯––≥ı ºªØ
+   \   000014   90....       MOV     DPTR,#NewProcessAPP_epDesc
+   \   000017   7414         MOV     A,#0x14
+   \   000019   F0           MOVX    @DPTR,A
+     57            NewProcessAPP_epDesc.task_id    = &NewProcessAPP_TaskID;
+   \   00001A   A3           INC     DPTR
+   \   00001B   74..         MOV     A,#NewProcessAPP_TaskID & 0xff
+   \   00001D   F0           MOVX    @DPTR,A
+   \   00001E   A3           INC     DPTR
+   \   00001F   74..         MOV     A,#(NewProcessAPP_TaskID >> 8) & 0xff
+   \   000021   F0           MOVX    @DPTR,A
+     58            NewProcessAPP_epDesc.simpleDesc
+     59                      = (SimpleDescriptionFormat_t *)&NewProcessAPP_SimpleDesc;
+   \   000022   A3           INC     DPTR
+   \   000023   74..         MOV     A,#NewProcessAPP_SimpleDesc & 0xff
+   \   000025   F0           MOVX    @DPTR,A
+   \   000026   A3           INC     DPTR
+   \   000027   74..         MOV     A,#(NewProcessAPP_SimpleDesc >> 8) & 0xff
+   \   000029   F0           MOVX    @DPTR,A
+     60            NewProcessAPP_epDesc.latencyReq = noLatencyReqs;
+   \   00002A   A3           INC     DPTR
+   \   00002B   E4           CLR     A
+   \   00002C   F0           MOVX    @DPTR,A
+     61          
+     62            // π”√afRegister∫Ø ˝Ω´Ω⁄µ„√Ë ˆ∑˚Ω¯––◊¢≤·≤≈ø…“‘ π”√OSAL∑˛ŒÒ
+     63            afRegister( &NewProcessAPP_epDesc );
+   \   00002D                ; Setup parameters for call to function afRegister
+   \   00002D   7A..         MOV     R2,#NewProcessAPP_epDesc & 0xff
+   \   00002F   7B..         MOV     R3,#(NewProcessAPP_epDesc >> 8) & 0xff
+   \   000031   12....       LCALL   ??afRegister?relay
+     64            //*********************uart≈‰÷√±Ì********************//  
+     65            uartConfig.configured           = TRUE;
+   \   000034   85..82       MOV     DPL,?XSP + 0
+   \   000037   85..83       MOV     DPH,?XSP + 1
+   \   00003A   7401         MOV     A,#0x1
+   \   00003C   F0           MOVX    @DPTR,A
+     66            uartConfig.baudRate             = HAL_UART_BR_115200;
+   \   00003D   12....       LCALL   ?XSTACK_DISP0_8
+   \   000040   7404         MOV     A,#0x4
+   \   000042   F0           MOVX    @DPTR,A
+     67            uartConfig.flowControl          = FALSE;
+   \   000043   7402         MOV     A,#0x2
+   \   000045   12....       LCALL   ?XSTACK_DISP0_8
+   \   000048   E4           CLR     A
+   \   000049   F0           MOVX    @DPTR,A
+     68            uartConfig.callBackFunc         = rxCB;//Œﬁ–Ëªÿµ˜∫Ø ˝
+   \   00004A   741B         MOV     A,#0x1b
+   \   00004C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00004F   74..         MOV     A,#??rxCB?relay & 0xff
+   \   000051   F0           MOVX    @DPTR,A
+   \   000052   A3           INC     DPTR
+   \   000053   74..         MOV     A,#(??rxCB?relay >> 8) & 0xff
+   \   000055   F0           MOVX    @DPTR,A
+     69            HalUARTOpen(0,&uartConfig);
+   \   000056                ; Setup parameters for call to function HalUARTOpen
+   \   000056   85..82       MOV     DPL,?XSP + 0
+   \   000059   85..83       MOV     DPH,?XSP + 1
+   \   00005C   AA82         MOV     R2,DPL
+   \   00005E   AB83         MOV     R3,DPH
+   \   000060   7900         MOV     R1,#0x0
+   \   000062   12....       LCALL   ??HalUARTOpen?relay
+     70          }
+   \   000065   741D         MOV     A,#0x1d
+   \   000067   12....       LCALL   ?DEALLOC_XSTACK8
+   \   00006A                REQUIRE ?Subroutine0
+   \   00006A                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     71          
+     72          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     73          uint16 NewProcessApp_ProcessEvent(uint8 task_id,uint16 events)
+   \                     NewProcessApp_ProcessEvent:
+     74          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV     ?V0 + 0,R2
+   \   000007   8B..         MOV     ?V0 + 1,R3
+     75          
+     76            afIncomingMSGPacket_t *MSGpkt;//∂®“Â“ª∏ˆ÷∏œÚΩ” ’œ˚œ¢Ω·ππÃÂµƒ÷∏’ÎMSGpkt
+     77             
+     78             if( events & SYS_EVENT_MSG)
+   \   000009   EB           MOV     A,R3
+   \   00000A   5480         ANL     A,#0x80
+   \   00000C   603A         JZ      ??NewProcessApp_ProcessEvent_0
+     79             {   
+     80          /* π”√osal_msg_receive∫Ø ˝¥”œ˚œ¢∂”¡–…œΩ” ’œ˚œ¢£¨∏√œ˚œ¢÷–∞¸∫¨Ω” ’µΩŒﬁœﬂ ˝æ›∞¸
+     81          ◊º»∑Àµ «∞¸∫¨¡À÷∏œÚΩ” ’µΩµƒŒﬁœﬂ ˝æ›∞¸µƒ÷∏’Î£©*******************************/
+     82                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(NewProcessAPP_TaskID);
+   \   00000E                ; Setup parameters for call to function osal_msg_receive
+   \   00000E   801B         SJMP    ??NewProcessApp_ProcessEvent_1
+     83                while( MSGpkt)
+     84                {
+     85                  switch(MSGpkt->hdr.event)
+   \                     ??NewProcessApp_ProcessEvent_2:
+   \   000010   8E82         MOV     DPL,R6
+   \   000012   8F83         MOV     DPH,R7
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   24E6         ADD     A,#-0x1a
+   \   000017   6004         JZ      ??NewProcessApp_ProcessEvent_3
+   \   000019   245A         ADD     A,#0x5a
+   \   00001B   7007         JNZ     ??NewProcessApp_ProcessEvent_4
+     86                  {
+     87                     case KEY_CHANGE:
+     88          	
+     89                     case AF_INCOMING_MSG_CMD: //∂‘Ω” ’µΩµƒœ˚œ¢Ω¯––≈–∂œ,»Áπ˚ «Œﬁœﬂ–≈∫≈‘Úµ˜”√œ¬¡–∫Ø ˝¥¶¿Ì
+     90          	NewProcessAPP_MessageMSGCB(MSGpkt);//…˘√˜œ˚œ¢¥¶¿Ì∫Ø ˝
+   \                     ??NewProcessApp_ProcessEvent_3:
+   \   00001D                ; Setup parameters for call to function NewProcessAPP_MessageMSGCB
+   \   00001D   EE           MOV     A,R6
+   \   00001E   FA           MOV     R2,A
+   \   00001F   EF           MOV     A,R7
+   \   000020   FB           MOV     R3,A
+   \   000021   12....       LCALL   ??NewProcessAPP_MessageMSGCB?relay
+     91          	break;
+     92                  default:    //µ±À˘”–case x:∂º≤ª÷¥–– ±÷¥––default£∫
+     93                    break;
+     94                  }
+     95                  osal_msg_deallocate((uint8 *)MSGpkt);//Ω” ’œ˚œ¢¥¶¿ÌÕÍ≥…£¨ Õ∑≈œ˚œ¢À˘’º”√¥Ê¥¢ø’º‰
+   \                     ??NewProcessApp_ProcessEvent_4:
+   \   000024                ; Setup parameters for call to function osal_msg_deallocate
+   \   000024   EE           MOV     A,R6
+   \   000025   FA           MOV     R2,A
+   \   000026   EF           MOV     A,R7
+   \   000027   FB           MOV     R3,A
+   \   000028   12....       LCALL   ??osal_msg_deallocate?relay
+     96                  MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( NewProcessAPP_TaskID );
+   \   00002B                ; Setup parameters for call to function osal_msg_receive
+   \                     ??NewProcessApp_ProcessEvent_1:
+   \   00002B   90....       MOV     DPTR,#NewProcessAPP_TaskID
+   \   00002E   E0           MOVX    A,@DPTR
+   \   00002F   F9           MOV     R1,A
+   \   000030   12....       LCALL   ??osal_msg_receive?relay
+   \   000033   8A..         MOV     ?V0 + 2,R2
+   \   000035   8B..         MOV     ?V0 + 3,R3
+   \   000037   AE..         MOV     R6,?V0 + 2
+   \   000039   AF..         MOV     R7,?V0 + 3
+     97                  //¥¶¿ÌÕÍ≥…∫Û£¨‘Ÿ π”√osal_msg_receive∫Ø ˝¥”œ˚œ¢∂”¡–…œΩ” ’œ˚œ¢
+     98                }
+   \   00003B   EE           MOV     A,R6
+   \   00003C   4F           ORL     A,R7
+   \   00003D   70D1         JNZ     ??NewProcessApp_ProcessEvent_2
+     99                return (events ^ SYS_EVENT_MSG);
+   \   00003F   AA..         MOV     R2,?V0 + 0
+   \   000041   E5..         MOV     A,?V0 + 1
+   \   000043   6480         XRL     A,#0x80
+   \   000045   FB           MOV     R3,A
+   \   000046   8004         SJMP    ??NewProcessApp_ProcessEvent_5
+    100                
+    101                
+    102             }
+    103          //   if(events & SEND_DATA_EVENT)  //*
+    104          //      {
+    105          //      NewProcessAPP_SendTheMessage();//**…˘√˜œ˚œ¢¥¶¿Ì∫Ø ˝
+    106          //      osal_start_timerEx(NewProcessAPP_TaskID,SEND_DATA_EVENT,100);
+    107          //      return (events ^ SEND_DATA_EVENT);//*
+    108          //      }
+    109             return 0;
+   \                     ??NewProcessApp_ProcessEvent_0:
+   \   000048   7A00         MOV     R2,#0x0
+   \   00004A   7B00         MOV     R3,#0x0
+   \                     ??NewProcessApp_ProcessEvent_5:
+   \   00004C   7F04         MOV     R7,#0x4
+   \   00004E   02....       LJMP    ?BANKED_LEAVE_XDATA
+    110          }
+    111          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    112          void NewProcessAPP_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+   \                     NewProcessAPP_MessageMSGCB:
+    113          {
+   \   000000   74F5         MOV     A,#-0xb
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 11
+   \   000005                ; Auto size: 5
+   \   000005   74FB         MOV     A,#-0x5
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    114             unsigned char buffer[5] = "   ";
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant "   ">` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant "   ">` & 0xff
+   \   00001A   7405         MOV     A,#0x5
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    115             switch( pkt->clusterId)
+   \   00001F   8A82         MOV     DPL,R2
+   \   000021   8B83         MOV     DPH,R3
+   \   000023   A3           INC     DPTR
+   \   000024   A3           INC     DPTR
+   \   000025   A3           INC     DPTR
+   \   000026   A3           INC     DPTR
+   \   000027   E0           MOVX    A,@DPTR
+   \   000028   6401         XRL     A,#0x1
+   \   00002A   7002         JNZ     ??NewProcessAPP_MessageMSGCB_0
+   \   00002C   A3           INC     DPTR
+   \   00002D   E0           MOVX    A,@DPTR
+   \                     ??NewProcessAPP_MessageMSGCB_0:
+   \   00002E   704E         JNZ     ??NewProcessAPP_MessageMSGCB_1
+    116             { 
+    117               case NEWPROCESSAPP_PERIODIC_CLUSTERID:
+    118                 osal_memcpy(buffer,pkt->cmd.Data,5);//Ω´ ’µΩµƒ ˝æ›øΩ±¥µΩbuffer÷–
+   \   000030                ; Setup parameters for call to function osal_memcpy
+   \   000030   EA           MOV     A,R2
+   \   000031   2422         ADD     A,#0x22
+   \   000033   F582         MOV     DPL,A
+   \   000035   EB           MOV     A,R3
+   \   000036   3400         ADDC    A,#0x0
+   \   000038   F583         MOV     DPH,A
+   \   00003A   E0           MOVX    A,@DPTR
+   \   00003B   F5..         MOV     ?V0 + 0,A
+   \   00003D   A3           INC     DPTR
+   \   00003E   E0           MOVX    A,@DPTR
+   \   00003F   F5..         MOV     ?V0 + 1,A
+   \   000041   75..00       MOV     ?V0 + 2,#0x0
+   \   000044   78..         MOV     R0,#?V0 + 0
+   \   000046   12....       LCALL   ?PUSH_XSTACK_I_THREE
+   \   000049   7C05         MOV     R4,#0x5
+   \   00004B   7D00         MOV     R5,#0x0
+   \   00004D   7403         MOV     A,#0x3
+   \   00004F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000052   AA82         MOV     R2,DPL
+   \   000054   AB83         MOV     R3,DPH
+   \   000056   12....       LCALL   ??osal_memcpy?relay
+   \   000059   7403         MOV     A,#0x3
+   \   00005B   12....       LCALL   ?DEALLOC_XSTACK8
+    119                 HalUARTWrite(0,buffer,5);
+   \   00005E                ; Setup parameters for call to function HalUARTWrite
+   \   00005E   7C05         MOV     R4,#0x5
+   \   000060   7D00         MOV     R5,#0x0
+   \   000062   85..82       MOV     DPL,?XSP + 0
+   \   000065   85..83       MOV     DPH,?XSP + 1
+   \   000068   AA82         MOV     R2,DPL
+   \   00006A   AB83         MOV     R3,DPH
+   \   00006C   7900         MOV     R1,#0x0
+   \   00006E   12....       LCALL   ??HalUARTWrite?relay
+    120                 HalLedBlink( HAL_LED_1, 1, 50, 50 );
+   \   000071                ; Setup parameters for call to function HalLedBlink
+   \   000071   7C32         MOV     R4,#0x32
+   \   000073   7D00         MOV     R5,#0x0
+   \   000075   7B32         MOV     R3,#0x32
+   \   000077   7A01         MOV     R2,#0x1
+   \   000079   7901         MOV     R1,#0x1
+   \   00007B   12....       LCALL   ??HalLedBlink?relay
+    121                 break;
+    122            default:
+    123              break;
+    124             }
+    125          }
+   \                     ??NewProcessAPP_MessageMSGCB_1:
+   \   00007E   7405         MOV     A,#0x5
+   \   000080   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000083   7F03         MOV     R7,#0x3
+   \   000085   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    126          void rxCB(uint8 port,uint8 event)//*¥Æø⁄ªÿµ˜∫Ø ˝
+   \                     rxCB:
+    127          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+    128            
+    129            if ((event & (HAL_UART_RX_FULL | HAL_UART_RX_ABOUT_FULL | HAL_UART_RX_TIMEOUT)))
+   \   000007   7407         MOV     A,#0x7
+   \   000009   5E           ANL     A,R6
+   \   00000A   6010         JZ      ??rxCB_0
+    130             {
+    131             //HalUARTWrite(0,"Ω” ’“ª¥Œ",8);
+    132             HalLedBlink( HAL_LED_2, 1, 50, 50 );
+   \   00000C                ; Setup parameters for call to function HalLedBlink
+   \   00000C   7C32         MOV     R4,#0x32
+   \   00000E   7D00         MOV     R5,#0x0
+   \   000010   7B32         MOV     R3,#0x32
+   \   000012   7A01         MOV     R2,#0x1
+   \   000014   7902         MOV     R1,#0x2
+   \   000016   12....       LCALL   ??HalLedBlink?relay
+    133             NewProcessAPP_SendTheMessage();
+   \   000019                ; Setup parameters for call to function NewProcessAPP_SendTheMessage
+   \   000019   12....       LCALL   ??NewProcessAPP_SendTheMessage?relay
+    134           
+    135            }
+    136          }
+   \                     ??rxCB_0:
+   \   00001C   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    137          void NewProcessAPP_SendTheMessage(void)//Œﬁœﬂ∑¢ÀÕ∫Ø ˝
+   \                     NewProcessAPP_SendTheMessage:
+    138          {  
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 17
+   \   000005   74EF         MOV     A,#-0x11
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+    139            
+    140             unsigned char theMessageData[5] = "     ";
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   AC82         MOV     R4,DPL
+   \   000012   AD83         MOV     R5,DPH
+   \   000014   7583..       MOV     DPH,#(`?<Constant "     ">` >> 8) & 0xff
+   \   000017   7582..       MOV     DPL,#`?<Constant "     ">` & 0xff
+   \   00001A   7405         MOV     A,#0x5
+   \   00001C   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    141             HalUARTRead(0,theMessageData,5);
+   \   00001F                ; Setup parameters for call to function HalUARTRead
+   \   00001F   7C05         MOV     R4,#0x5
+   \   000021   FD           MOV     R5,A
+   \   000022   85..82       MOV     DPL,?XSP + 0
+   \   000025   85..83       MOV     DPH,?XSP + 1
+   \   000028   AA82         MOV     R2,DPL
+   \   00002A   AB83         MOV     R3,DPH
+   \   00002C   F9           MOV     R1,A
+   \   00002D   12....       LCALL   ??HalUARTRead?relay
+    142             HalLedBlink(HAL_LED_2,3,50,50);
+   \   000030                ; Setup parameters for call to function HalLedBlink
+   \   000030   7C32         MOV     R4,#0x32
+   \   000032   7D00         MOV     R5,#0x0
+   \   000034   7B32         MOV     R3,#0x32
+   \   000036   7A03         MOV     R2,#0x3
+   \   000038   7902         MOV     R1,#0x2
+   \   00003A   12....       LCALL   ??HalLedBlink?relay
+    143             
+    144             afAddrType_t my_DstAddr;
+    145             my_DstAddr.addrMode = (afAddrMode_t)AddrBroadcast;//≥ı ºªØŒ™π„≤•
+   \   00003D   740D         MOV     A,#0xd
+   \   00003F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000042   740F         MOV     A,#0xf
+   \   000044   F0           MOVX    @DPTR,A
+    146             my_DstAddr.endPoint = NEWPROCESSAPP_ENDPOINT;//≥ı ºªØ∂Àø⁄∫≈
+   \   000045   14           DEC     A
+   \   000046   12....       LCALL   ?XSTACK_DISP0_8
+   \   000049   7414         MOV     A,#0x14
+   \   00004B   F0           MOVX    @DPTR,A
+    147             my_DstAddr.addr.shortAddr = 0xFFFF;//∑¢ÀÕ ˝æ›
+   \   00004C   7405         MOV     A,#0x5
+   \   00004E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000051   74FF         MOV     A,#-0x1
+   \   000053   F0           MOVX    @DPTR,A
+   \   000054   A3           INC     DPTR
+   \   000055   F0           MOVX    @DPTR,A
+    148             
+    149             AF_DataRequest(&my_DstAddr,//∞¸∫¨¡ÀƒøµƒΩ⁄µ„µƒÕ¯¬Áµÿ÷∑º∞∑¢ÀÕ ˝æ›∏Ò Ω£¨»Áπ„≤•£¨µ•≤•£¨∂‡≤•
+    150          	     &NewProcessAPP_epDesc,//÷∏∂®Ω⁄µ„µƒ∑¢ÀÕ∂Àø⁄∫≈
+    151          	     NEWPROCESSAPP_PERIODIC_CLUSTERID,//√¸¡Ó∫≈
+    152          	     5,//∑¢ÀÕ ˝æ›¥Û–°
+    153          	     theMessageData,// ˝æ›ª∫¥Ê
+    154          	     &NewProcessAPP_TransID,//÷∏œÚ∑¢ÀÕ÷∏’Î£¨√ø∑¢ÀÕ“ª¥Œº”“ª
+    155          	     AF_DISCV_ROUTE, 
+    156          	     AF_DEFAULT_RADIUS);
+   \   000056                ; Setup parameters for call to function AF_DataRequest
+   \   000056   75..1E       MOV     ?V0 + 0,#0x1e
+   \   000059   78..         MOV     R0,#?V0 + 0
+   \   00005B   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   00005E   75....       MOV     ?V0 + 0,#NewProcessAPP_TransID & 0xff
+   \   000061   75....       MOV     ?V0 + 1,#(NewProcessAPP_TransID >> 8) & 0xff
+   \   000064   78..         MOV     R0,#?V0 + 0
+   \   000066   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000069   7403         MOV     A,#0x3
+   \   00006B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00006E   8582..       MOV     ?V0 + 0,DPL
+   \   000071   8583..       MOV     ?V0 + 1,DPH
+   \   000074   78..         MOV     R0,#?V0 + 0
+   \   000076   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000079   75..05       MOV     ?V0 + 0,#0x5
+   \   00007C   75..00       MOV     ?V0 + 1,#0x0
+   \   00007F   78..         MOV     R0,#?V0 + 0
+   \   000081   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000084   75..01       MOV     ?V0 + 0,#0x1
+   \   000087   78..         MOV     R0,#?V0 + 0
+   \   000089   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   00008C   7920         MOV     R1,#0x20
+   \   00008E   7C..         MOV     R4,#NewProcessAPP_epDesc & 0xff
+   \   000090   7D..         MOV     R5,#(NewProcessAPP_epDesc >> 8) & 0xff
+   \   000092   740E         MOV     A,#0xe
+   \   000094   12....       LCALL   ?XSTACK_DISP0_8
+   \   000097   AA82         MOV     R2,DPL
+   \   000099   AB83         MOV     R3,DPH
+   \   00009B   12....       LCALL   ??AF_DataRequest?relay
+   \   00009E   7409         MOV     A,#0x9
+   \   0000A0   12....       LCALL   ?DEALLOC_XSTACK8
+    157             
+    158                            HalLedBlink(HAL_LED_2,3,50,50);
+   \   0000A3                ; Setup parameters for call to function HalLedBlink
+   \   0000A3   7C32         MOV     R4,#0x32
+   \   0000A5   7D00         MOV     R5,#0x0
+   \   0000A7   7B32         MOV     R3,#0x32
+   \   0000A9   7A03         MOV     R2,#0x3
+   \   0000AB   7902         MOV     R1,#0x2
+   \   0000AD   12....       LCALL   ??HalLedBlink?relay
+    159                           //HalLedBlink(HAL_LED_2,0,50,500);
+    160          	   
+    161              
+    162          }
+   \   0000B0   7411         MOV     A,#0x11
+   \   0000B2   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0000B5   7F02         MOV     R7,#0x2
+   \   0000B7   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??NewProcessApp_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    NewProcessApp_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??NewProcessApp_ProcessEvent?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    NewProcessApp_ProcessEvent
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??NewProcessAPP_MessageMSGCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    NewProcessAPP_MessageMSGCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??rxCB?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    rxCB
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??NewProcessAPP_SendTheMessage?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    NewProcessAPP_SendTheMessage
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "   ">`:
+   \   000000   20202000     DB "   "
+   \   000004   00           DB 0
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "     ">`:
+   \   000000   20202020     DB 20H, 20H, 20H, 20H, 20H
+   \            20      
+    163          
+    164          
+    165          
+    166          
+    167          
+    168          
+
+   Maximum stack usage in bytes:
+
+     Function                       ISTACK PSTACK XSTACK
+     --------                       ------ ------ ------
+     NewProcessAPP_MessageMSGCB         2      0     31
+       -> osal_memcpy                   0      0     38
+       -> HalUARTWrite                  0      0     32
+       -> HalLedBlink                   0      0     32
+     NewProcessAPP_SendTheMessage       2      0     45
+       -> HalUARTRead                   0      0     54
+       -> HalLedBlink                   0      0     54
+       -> AF_DataRequest                0      0     72
+       -> HalLedBlink                   0      0     54
+     NewProcessApp_Init                 0      0     38
+       -> afRegister                    0      0     76
+       -> HalUARTOpen                   0      0     76
+     NewProcessApp_ProcessEvent         0      0     12
+       -> osal_msg_receive              0      0     24
+       -> NewProcessAPP_MessageMSGCB
+                                        0      0     24
+       -> osal_msg_deallocate           0      0     24
+       -> osal_msg_receive              0      0     24
+     rxCB                               0      0      9
+       -> HalLedBlink                   0      0     18
+       -> NewProcessAPP_SendTheMessage
+                                        0      0     18
+
+
+   Segment part sizes:
+
+     Function/Label                       Bytes
+     --------------                       -----
+     NewProcessAPP_ClusterList               4
+     NewProcessAPP_SimpleDesc               12
+     NewProcessAPP_epDesc                    6
+     NewProcessAPP_TaskID                    1
+     NewProcessAPP_TransID                   1
+     uartbuf                               128
+     NewProcessApp_Init                    106
+     ?Subroutine0                            5
+     NewProcessApp_ProcessEvent             81
+     NewProcessAPP_MessageMSGCB            136
+     rxCB                                   31
+     NewProcessAPP_SendTheMessage          186
+     ??NewProcessApp_Init?relay              6
+     ??NewProcessApp_ProcessEvent?relay      6
+     ??NewProcessAPP_MessageMSGCB?relay      6
+     ??rxCB?relay                            6
+     ??NewProcessAPP_SendTheMessage?relay    6
+     ?<Constant "   ">                       5
+     ?<Constant "     ">                     5
+
+ 
+ 545 bytes in segment BANKED_CODE
+  30 bytes in segment BANK_RELAYS
+  26 bytes in segment XDATA_ROM_C
+ 136 bytes in segment XDATA_Z
+ 
+ 575 bytes of CODE  memory
+  26 bytes of CONST memory
+ 136 bytes of XDATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,66 @@
+[DebugChecksum]
+Checksum=334277265
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 1
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[TraceHelper]
+Enabled=0
+ShowSource=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Count=0
+[ChipconEmu]
+Stop timers on halt=0
+Leave target running=1
+[Aliases]
+A0=_ "C:\Users\Administrator\Desktop\NEWLab平台无线传感网络实训指导书\NEWLab平台无线传感网络实训指导书\实训11 基于BasicRF的无线传感网络应用\CC2530_lib\board\hal_led.c" ""
+A1=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\board\hal_board.c" ""
+A2=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\board\hal_led.c" ""
+A3=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\common\hal_clock.c" ""
+A4=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\common\hal_rf.c" ""
+A5=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\common\hal_uart.c" ""
+A6=_ "C:\Users\Administrator\Desktop\NewLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\Project\collect.c" ""
+A7=_ "C:\Users\yzk\Desktop\zigbee题目练习\2016年比赛\2\CC2530_lib\board\hal_board.c" ""
+A8=_ "C:\Users\yzk\Desktop\zigbee题目练习\2016年比赛\2\CC2530_lib\board\hal_led.c" ""
+A9=_ "C:\Users\yzk\Desktop\zigbee题目练习\2016年比赛\2\CC2530_lib\common\hal_uart.c" ""
+A10=_ "E:\ylf\15-16(1)\教材\NEWLab平台无线传感网络实训指导书\实训6 模拟量传感器采集\CC2530_lib\common\hal_uart.c" ""
+A11=_ "F:\code\RFBASE\CC2530_lib\basicrf\basic_rf.c" ""
+A12=_ "J:\zigbee\实训6 模拟量传感器采集\Project\sensor.c" ""
+Count=13
+SuppressDialog=1
