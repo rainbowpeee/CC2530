@@ -1,0 +1,689 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               31/Oct/2019  14:59:23
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\Source\iic.c
+#    Command line       =  
+#        -f C:\Users\hhhho\AppData\Local\Temp\EW1532.tmp
+#        (C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\Source\iic.c
+#        -D ZTOOL_P1 -D SECURE=1 -D xNV_INIT -D xNV_RESTORE -D
+#        LCD_SUPPORTED=FALSE -D MULTICAST_ENABLED=FALSE -D FEATURE_SYSTEM_STATS
+#        -lC
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\CoordinatorEB\List
+#        -lA
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\CoordinatorEB\List
+#        --diag_suppress Pe001,Pa010 -o
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\CoordinatorEB\Obj
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000)
+#        -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\Source\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\Source\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        -Ohz --require_prototypes)
+#    Locale             =  Chinese (Simplified)_CHN.936
+#    List file          =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\CoordinatorEB\List\iic.lst
+#    Object file        =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\SampleApp\CC2530DB\CoordinatorEB\Obj\iic.r51
+#
+###############################################################################
+
+C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001-AD\Projects\zstack\Prj\Source\iic.c
+      1          
+      2          /*描述：显示加速度计和陀螺仪的6位原始数据
+      3          ****************************************/
+      4          #include "ioCC2530.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xd0
+   \   union <unnamed> volatile __sfr _A_PSW
+   \                     _A_PSW:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      5          #include "iic.h"
+      6          #include "OnBoard.h"
+      7          #include "hal_types.h"
+      8           
+      9          
+     10          /*
+     11            引脚定义
+     12          */
+     13          #define SDA P0_4
+     14          #define SCL P0_5
+     15          
+     16          
+     17          
+     18          
+     19           
+     20          
+     21           
+     22           
+     23           
+     24          /****************us延时函数 32M晶振 单周期MCU********************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     25          void delay_us(unsigned int u)
+   \                     delay_us:
+     26          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000   74F6         MOV       A,#-0xa
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     27             u=4*u;
+     28             MicroWait(u);
+   \   000005                ; Setup parameters for call to function Onboard_wait
+   \   000005   8A..         MOV       ?V0,R2
+   \   000007   8B..         MOV       ?V1,R3
+   \   000009   7402         MOV       A,#0x2
+   \   00000B   78..         MOV       R0,#?V0
+   \   00000D   12....       LCALL     ?S_SHL
+   \   000010   AA..         MOV       R2,?V0
+   \   000012   AB..         MOV       R3,?V1
+   \   000014   12....       LCALL     `??Onboard_wait::?relay`; Banked call to: Onboard_wait
+     29          }
+   \   000017   7F02         MOV       R7,#0x2
+   \   000019   02....       LJMP      ?BANKED_LEAVE_XDATA
+     30           
+     31           
+     32          /*****************************MPU6050*******************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     33          void WriteSDA_0(void) 
+   \                     WriteSDA_0:
+     34          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     35              P0SEL&=~0x10;
+   \   000000   12....       LCALL     ?Subroutine4 & 0xFFFF
+     36              P0DIR|=0x10;
+     37              SDA=0;
+   \                     ??CrossCallReturnLabel_3:
+   \   000003   C284         CLR       0x80.4
+     38          }
+   \   000005   02....       LJMP      ?BRET
+   \   000008                REQUIRE P0SEL
+   \   000008                REQUIRE P0DIR
+   \   000008                REQUIRE _A_P0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   53F3EF       ANL       0xf3,#0xef
+   \   000003   43FD10       ORL       0xfd,#0x10
+   \   000006   22           RET
+     39           
+     40           
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     41          void WriteSDA_1(void) 
+   \                     WriteSDA_1:
+     42          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     43              P0SEL&=~0x10;
+   \   000000   12....       LCALL     ?Subroutine4 & 0xFFFF
+     44              P0DIR|=0x10;
+     45              SDA=1;
+   \                     ??CrossCallReturnLabel_4:
+   \   000003   D284         SETB      0x80.4
+     46          }
+   \   000005   02....       LJMP      ?BRET
+   \   000008                REQUIRE P0SEL
+   \   000008                REQUIRE P0DIR
+   \   000008                REQUIRE _A_P0
+     47              
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     48          void WriteSCL_0(void)  
+   \                     WriteSCL_0:
+     49          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     50              P0SEL&=~0x20;
+   \   000000   53F3DF       ANL       0xf3,#0xdf
+     51              P0DIR|=0x20;
+   \   000003   43FD20       ORL       0xfd,#0x20
+     52              SCL=0;
+   \   000006   C285         CLR       0x80.5
+     53          }
+   \   000008   02....       LJMP      ?BRET
+   \   00000B                REQUIRE P0SEL
+   \   00000B                REQUIRE P0DIR
+   \   00000B                REQUIRE _A_P0
+     54           
+     55           
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     56          void WriteSCL_1(void)  
+   \                     WriteSCL_1:
+     57          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     58              P0SEL&=~0x20;
+   \   000000   53F3DF       ANL       0xf3,#0xdf
+     59              P0DIR|=0x20;
+   \   000003   43FD20       ORL       0xfd,#0x20
+     60              SCL=1;
+   \   000006   D285         SETB      0x80.5
+     61          }
+   \   000008   02....       LJMP      ?BRET
+   \   00000B                REQUIRE P0SEL
+   \   00000B                REQUIRE P0DIR
+   \   00000B                REQUIRE _A_P0
+     62          
+     63           
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     64          void ReadSDA(void)//sda输入,=0
+   \                     ReadSDA:
+     65          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     66              P0SEL&=~0x10;P0DIR&=~0x10;
+   \   000000   53F3EF       ANL       0xf3,#0xef
+   \   000003   53FDEF       ANL       0xfd,#0xef
+     67          }
+   \   000006   02....       LJMP      ?BRET
+   \   000009                REQUIRE P0SEL
+   \   000009                REQUIRE P0DIR
+     68          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     69          void SDA_OUT(void)//sda输出,=1
+   \                     SDA_OUT:
+     70          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     71              P0SEL&=~0x10;
+   \   000000   12....       LCALL     ?Subroutine4 & 0xFFFF
+     72              P0DIR|=0x10;
+     73          }
+   \                     ??CrossCallReturnLabel_5:
+   \   000003   02....       LJMP      ?BRET
+   \   000006                REQUIRE P0SEL
+   \   000006                REQUIRE P0DIR
+     74           
+     75          //void Init_IO(void)
+     76          //{
+     77          //  P0DIR|=0xc0;
+     78          //  P0SEL&=0x3f;
+     79          //}
+     80          // 
+     81          /**************************************
+     82          起始信号
+     83          **************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     84          void OLED_Start(void)  
+   \                     OLED_Start:
+     85          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     86              WriteSDA_1();
+   \   000004                ; Setup parameters for call to function WriteSDA_1
+   \   000004   12....       LCALL     `??WriteSDA_1::?relay`; Banked call to: WriteSDA_1
+     87              WriteSCL_1();
+   \   000007                ; Setup parameters for call to function WriteSCL_1
+   \   000007   12....       LCALL     ?Subroutine3 & 0xFFFF
+     88              delay_us(5);
+     89              WriteSDA_0();
+   \                     ??CrossCallReturnLabel_0:
+   \   00000A                ; Setup parameters for call to function WriteSDA_0
+   \   00000A   12....       LCALL     `??WriteSDA_0::?relay`; Banked call to: WriteSDA_0
+     90              delay_us(5);
+   \   00000D                ; Setup parameters for call to function delay_us
+   \   00000D   12....       LCALL     ??Subroutine5_0 & 0xFFFF
+     91              WriteSCL_0();
+     92              delay_us(5);
+     93          }
+   \                     ??CrossCallReturnLabel_8:
+   \   000010                REQUIRE ?Subroutine0
+   \   000010                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D083         POP       DPH
+   \   000002   D082         POP       DPL
+   \   000004   02....       LJMP      ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   12....       LCALL     `??WriteSCL_1::?relay`; Banked call to: WriteSCL_1
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003   7A05         MOV       R2,#0x5
+   \   000005   7B00         MOV       R3,#0x0
+   \   000007   12....       LCALL     `??delay_us::?relay`; Banked call to: delay_us
+   \   00000A   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine5_0:
+   \   000000   7A05         MOV       R2,#0x5
+   \   000002   7B00         MOV       R3,#0x0
+   \   000004   12....       LCALL     `??delay_us::?relay`; Banked call to: delay_us
+   \   000007                ; Setup parameters for call to function WriteSCL_0
+   \   000007                ; Setup parameters for call to function WriteSCL_0
+   \   000007                ; Setup parameters for call to function WriteSCL_0
+   \   000007                REQUIRE ??Subroutine6_0
+   \   000007                ; // Fall through to label ??Subroutine6_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine6_0:
+   \   000000   12....       LCALL     `??WriteSCL_0::?relay`; Banked call to: WriteSCL_0
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003   7A05         MOV       R2,#0x5
+   \   000005   7B00         MOV       R3,#0x0
+   \   000007   12....       LCALL     `??delay_us::?relay`; Banked call to: delay_us
+   \   00000A   22           RET
+     94           
+     95           
+     96          /**************************************
+     97          停止信号
+     98          **************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     99          void OLED_Stop()  
+   \                     OLED_Stop:
+    100          {    
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    101             WriteSDA_0();
+   \   000004                ; Setup parameters for call to function WriteSDA_0
+   \   000004   12....       LCALL     `??WriteSDA_0::?relay`; Banked call to: WriteSDA_0
+    102             WriteSCL_1();
+   \   000007                ; Setup parameters for call to function WriteSCL_1
+   \   000007   12....       LCALL     ?Subroutine3 & 0xFFFF
+    103             delay_us(5);
+    104             WriteSDA_1();
+   \                     ??CrossCallReturnLabel_1:
+   \   00000A                ; Setup parameters for call to function WriteSDA_1
+   \   00000A   12....       LCALL     `??WriteSDA_1::?relay`; Banked call to: WriteSDA_1
+    105          }
+   \   00000D   80..         SJMP      ?Subroutine0
+    106           
+    107           
+    108          //I2C发送应答信号
+    109          //入口参数:ack (0:ACK 1:NAK)
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    110          void OLED_SendACK(unsigned char ack)
+   \                     OLED_SendACK:
+    111          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV       A,R1
+    112              
+    113              SDA=ack;                     //写应答信号
+   \   000006   A2E0         MOV       C,0xE0 /* A   */.0
+   \   000008   9284         MOV       0x80.4,C
+    114              WriteSCL_1();                   //拉高时钟线
+   \   00000A                ; Setup parameters for call to function WriteSCL_1
+   \   00000A   12....       LCALL     ?Subroutine2 & 0xFFFF
+    115              delay_us(5);//Delay5us();    //延时
+    116              WriteSCL_0();                   //拉低时钟线
+    117              delay_us(5);//Delay5us();    //延时
+    118          }
+   \                     ??CrossCallReturnLabel_6:
+   \   00000D                REQUIRE ?Subroutine1
+   \   00000D                REQUIRE _A_P0
+   \   00000D                ; // Fall through to label ?Subroutine1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7F01         MOV       R7,#0x1
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL     `??WriteSCL_1::?relay`; Banked call to: WriteSCL_1
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                ; Setup parameters for call to function delay_us
+   \   000003                REQUIRE ??Subroutine5_0
+   \   000003                ; // Fall through to label ??Subroutine5_0
+    119           
+    120           
+    121          /**************************************
+    122          发送应答信号
+    123          **************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    124          unsigned char OLED_RecvACK()
+   \                     OLED_RecvACK:
+    125          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    126              ReadSDA();
+   \   000004                ; Setup parameters for call to function ReadSDA
+   \   000004   12....       LCALL     `??ReadSDA::?relay`; Banked call to: ReadSDA
+    127              WriteSCL_1();                       //拉高时钟线
+   \   000007                ; Setup parameters for call to function WriteSCL_1
+   \   000007   12....       LCALL     ?Subroutine3 & 0xFFFF
+    128              delay_us(5);//Delay5us();    //延时
+    129              CY=SDA;                      //读应答信号
+   \                     ??CrossCallReturnLabel_2:
+   \   00000A   A284         MOV       C,0x80.4
+   \   00000C   92D7         MOV       0xd0.7,C
+    130              WriteSCL_0();                       //拉低时钟线
+   \   00000E                ; Setup parameters for call to function WriteSCL_0
+   \   00000E   12....       LCALL     ??Subroutine6_0 & 0xFFFF
+    131              delay_us(5);//Delay5us();    //延时
+    132              P0DIR|=0x00;
+   \                     ??CrossCallReturnLabel_9:
+   \   000011   85FDFD       MOV       0xfd,0xfd
+    133              return CY;
+   \   000014   A2D7         MOV       C,0xd0.7
+   \   000016   E4           CLR       A
+   \   000017   33           RLC       A
+   \   000018   F9           MOV       R1,A
+   \   000019   80..         SJMP      ?Subroutine0
+   \   00001B                REQUIRE _A_PSW
+   \   00001B                REQUIRE _A_P0
+   \   00001B                REQUIRE P0DIR
+    134          }
+    135           
+    136           
+    137          /**************************************
+    138          向IIC总线发送一个字节数据
+    139          **************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    140          void OLED_SendByte(unsigned char data)
+   \                     OLED_SendByte:
+    141          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV       A,R1
+   \   000006   FF           MOV       R7,A
+    142              unsigned char i;
+    143              SDA_OUT();
+   \   000007                ; Setup parameters for call to function SDA_OUT
+   \   000007   12....       LCALL     `??SDA_OUT::?relay`; Banked call to: SDA_OUT
+    144              
+    145              for(i=0;i<8;i++)         //8位计数器
+   \   00000A   7E08         MOV       R6,#0x8
+    146              {       
+    147                  if(data&0x80)
+   \                     ??OLED_SendByte_0:
+   \   00000C   EF           MOV       A,R7
+   \   00000D   A2E7         MOV       C,0xE0 /* A   */.7
+   \   00000F   5005         JNC       ??OLED_SendByte_1
+    148                  {WriteSDA_1();}
+   \   000011                ; Setup parameters for call to function WriteSDA_1
+   \   000011   12....       LCALL     `??WriteSDA_1::?relay`; Banked call to: WriteSDA_1
+   \   000014   8003         SJMP      ??OLED_SendByte_2
+    149                  else 
+    150                  {WriteSDA_0();}
+   \                     ??OLED_SendByte_1:
+   \   000016                ; Setup parameters for call to function WriteSDA_0
+   \   000016   12....       LCALL     `??WriteSDA_0::?relay`; Banked call to: WriteSDA_0
+    151                  
+    152                  data<<=1;
+   \                     ??OLED_SendByte_2:
+   \   000019   EF           MOV       A,R7
+   \   00001A   C3           CLR       C
+   \   00001B   33           RLC       A
+   \   00001C   FF           MOV       R7,A
+    153                  WriteSCL_1();            //拉高时钟线
+   \   00001D                ; Setup parameters for call to function WriteSCL_1
+   \   00001D   12....       LCALL     ?Subroutine2 & 0xFFFF
+    154                  delay_us(5);          //延时
+    155                  WriteSCL_0();            //拉低时钟线
+    156                  delay_us(5);          //延时
+    157              }
+   \                     ??CrossCallReturnLabel_7:
+   \   000020   1E           DEC       R6
+   \   000021   EE           MOV       A,R6
+   \   000022   70E8         JNZ       ??OLED_SendByte_0
+    158              OLED_RecvACK();
+   \   000024                ; Setup parameters for call to function OLED_RecvACK
+   \   000024   12....       LCALL     `??OLED_RecvACK::?relay`; Banked call to: OLED_RecvACK
+    159          }
+   \   000027   80..         SJMP      ?Subroutine1
+    160           
+    161           
+    162          /**************************************
+    163          从IIC总线接收一个字节数据
+    164          **************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    165          unsigned char OLED_RecvByte()
+   \                     OLED_RecvByte:
+    166          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+    167              unsigned char i;
+    168              unsigned char dat = 0;
+   \   000005   7E00         MOV       R6,#0x0
+    169              WriteSDA_1();                  //使能内部上拉,准备读取数据,
+   \   000007                ; Setup parameters for call to function WriteSDA_1
+   \   000007   12....       LCALL     `??WriteSDA_1::?relay`; Banked call to: WriteSDA_1
+    170              for (i=0; i<8; i++)         //8位计数器
+   \   00000A   7F08         MOV       R7,#0x8
+    171              {
+    172                  dat <<= 1;
+    173                  SCL = 1;                //拉高时钟线
+   \                     ??OLED_RecvByte_0:
+   \   00000C   D285         SETB      0x80.5
+    174                  delay_us(5);                 //延时
+   \   00000E                ; Setup parameters for call to function delay_us
+   \   00000E   7A05         MOV       R2,#0x5
+   \   000010   7B00         MOV       R3,#0x0
+   \   000012   12....       LCALL     `??delay_us::?relay`; Banked call to: delay_us
+    175                  dat |= SDA;             //读数据               
+   \   000015   A284         MOV       C,0x80.4
+   \   000017   E4           CLR       A
+   \   000018   33           RLC       A
+   \   000019   F8           MOV       R0,A
+   \   00001A   EE           MOV       A,R6
+   \   00001B   33           RLC       A
+   \   00001C   48           ORL       A,R0
+   \   00001D   FE           MOV       R6,A
+    176                  SCL = 0;                //拉低时钟线
+   \   00001E   C285         CLR       0x80.5
+    177                   delay_us(5);                 //延时
+   \   000020                ; Setup parameters for call to function delay_us
+   \   000020   7A05         MOV       R2,#0x5
+   \   000022   7B00         MOV       R3,#0x0
+   \   000024   12....       LCALL     `??delay_us::?relay`; Banked call to: delay_us
+    178              }
+   \   000027   DFE3         DJNZ      R7,??OLED_RecvByte_0
+    179              return dat;
+   \   000029   EE           MOV       A,R6
+   \   00002A   F9           MOV       R1,A
+   \   00002B   02....       LJMP      ?Subroutine1 & 0xFFFF
+   \   00002E                REQUIRE _A_P0
+    180           
+    181          }
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      2      9   OLED_RecvACK
+        2      0   -> ReadSDA
+        2      0   -> WriteSCL_0
+        2      0   -> WriteSCL_1
+        2      0   -> delay_us
+      0      9   OLED_RecvByte
+        0      9   -> WriteSDA_1
+        0      9   -> delay_us
+      0      9   OLED_SendACK
+        0      9   -> WriteSCL_0
+        0      9   -> WriteSCL_1
+        0      9   -> delay_us
+      0      9   OLED_SendByte
+        0      9   -> OLED_RecvACK
+        0      9   -> SDA_OUT
+        0      9   -> WriteSCL_0
+        0      9   -> WriteSCL_1
+        0      9   -> WriteSDA_0
+        0      9   -> WriteSDA_1
+        0      9   -> delay_us
+      2      0   OLED_Start
+        2      0   -> WriteSCL_0
+        2      0   -> WriteSCL_1
+        2      0   -> WriteSDA_0
+        2      0   -> WriteSDA_1
+        2      0   -> delay_us
+      2      0   OLED_Stop
+        2      0   -> WriteSCL_1
+        2      0   -> WriteSDA_0
+        2      0   -> WriteSDA_1
+        2      0   -> delay_us
+      0      0   ReadSDA
+      0      9   SDA_OUT
+      0      9   WriteSCL_0
+      0      9   WriteSCL_1
+      0      9   WriteSDA_0
+      0      9   WriteSDA_1
+      0     19   delay_us
+        0     10   -> Onboard_wait
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       7  ??Subroutine5_0
+      11  ??Subroutine6_0
+       7  ?Subroutine0
+       5  ?Subroutine1
+       3  ?Subroutine2
+      11  ?Subroutine3
+       7  ?Subroutine4
+      27  OLED_RecvACK
+      46  OLED_RecvByte
+      13  OLED_SendACK
+      41  OLED_SendByte
+      16  OLED_Start
+      15  OLED_Stop
+       1  P0DIR
+       1  P0SEL
+       9  ReadSDA
+       6  SDA_OUT
+      11  WriteSCL_0
+      11  WriteSCL_1
+       8  WriteSDA_0
+       8  WriteSDA_1
+       1  _A_P0
+       1  _A_PSW
+      28  delay_us
+      78  -- Other
+
+ 
+ 290 bytes in segment BANKED_CODE
+  78 bytes in segment BANK_RELAYS
+   4 bytes in segment SFR_AN
+ 
+  78 bytes of CODE     memory
+   0 bytes of DATA     memory (+ 4 bytes shared)
+ 290 bytes of HUGECODE memory
+
+Errors: none
+Warnings: none

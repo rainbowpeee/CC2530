@@ -1,0 +1,24 @@
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\bin\Debug\SerialCommunication.exe
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\bin\Debug\SerialCommunication.pdb
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.csprojResolveAssemblyReference.cache
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.frmMain.resources
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.Properties.Resources.resources
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.csproj.GenerateResource.Cache
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.exe
+E:\Visual Studio Project\Project\ConExpress.Study\SerialCommunication\obj\Debug\SerialCommunication.pdb
+C:\Users\hhhho\Downloads\SerialCommunication\bin\Debug\SerialCommunication.exe
+C:\Users\hhhho\Downloads\SerialCommunication\bin\Debug\SerialCommunication.pdb
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.frmMain.resources
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.Properties.Resources.resources
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.csproj.GenerateResource.cache
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.exe
+C:\Users\hhhho\Downloads\SerialCommunication\obj\Debug\SerialCommunication.pdb
+C:\Users\hhhho\Desktop\H\SerialCommunication\bin\Debug\SerialCommunication.exe
+C:\Users\hhhho\Desktop\H\SerialCommunication\bin\Debug\SerialCommunication.pdb
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.frmMain.resources
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.Properties.Resources.resources
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.csproj.GenerateResource.cache
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.exe
+C:\Users\hhhho\Desktop\H\SerialCommunication\obj\Debug\SerialCommunication.pdb

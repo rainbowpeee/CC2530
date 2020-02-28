@@ -1,0 +1,518 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.30.1.6000 for 8051               29/Oct/2019  22:41:30
+# Copyright 2004-2018 IAR Systems AB.
+# PC-locked license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\Source\app_driver.c
+#    Command line       =  
+#        -f C:\Users\hhhho\AppData\Local\Temp\EW5C13.tmp
+#        (C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\Source\app_driver.c
+#        -D SECURE=1 -D xNV_INIT -D xNV_RESTORE -D ZTOOL_P1 -D
+#        LCD_SUPPORTED=FALSE -D MULTICAST_ENABLED=FALSE -D FEATURE_SYSTEM_STATS
+#        -lC
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\RouterEB\List
+#        -lA
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\RouterEB\List
+#        --diag_suppress Pe001,Pa010 -o
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\RouterEB\Obj
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wRouter.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DRTR_NWK) -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000)
+#        -f
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wZCL.cfg
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\Source\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\Source\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zcl\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        -Ohz --require_prototypes)
+#    Locale             =  Chinese (Simplified)_CHN.936
+#    List file          =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\RouterEB\List\app_driver.lst
+#    Object file        =  
+#        C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\CC2530DB\RouterEB\Obj\app_driver.r51
+#
+###############################################################################
+
+C:\Users\hhhho\Desktop\Z-Stack1.2.2a-spp-v001\Z-Stack1.2.2a-spp-v001\Projects\zstack\Prj\SampleApp\Source\app_driver.c
+      1          #include "OSAL.h"
+      2          #include "ZGlobals.h"
+      3          #include "OnBoard.h"
+      4          
+      5          #include "hal_uart.h"
+      6          
+      7          #include "app_driver.h"
+      8          #include <stdio.h>
+      9          
+     10          
+     11          //static byte key_rspTaskID = 0;
+     12          //static uint16 key_event = 0;
+     13          //static uint16 key_time = 0;
+     14          
+     15          //void keyInit( byte task, uint16 event, uint16 time )
+     16          //{
+     17          //  key_rspTaskID = task;
+     18          //  key_event = event;
+     19          //  key_time = time;
+     20          //  
+     21          //  //P0中断优先级最高
+     22          //  //  IP0 |= (1<<5);
+     23          //  //  IP1 |= (1<<5);
+     24          //  
+     25          //  // P00
+     26          //  P0SEL &= ~0x01;       // 0:GPIO
+     27          //  P0DIR &= ~0x01;       // 0:input    1:output
+     28          //  P0INP |= 0x01;        // 0:上下拉    1:三态
+     29          //  P0IEN |= 0X01;        // P00 设置为中断方式
+     30          //  PICTL |= 0x01;        // 下降沿触发  
+     31          //  
+     32          //  // P01
+     33          //  P0SEL &= ~0x02;       // 0:GPIO
+     34          //  P0DIR &= ~0x02;       // 0:input    1:output
+     35          //  P0INP |= 0x02;        // 0:上下拉    1:三态
+     36          //  P0IEN |= 0X02;        // P00 设置为中断方式
+     37          //  PICTL |= 0x02;        // 下降沿触发  
+     38          //  
+     39          //  IEN1 |= 0X20;         // 允许P0口中断;
+     40          //  P0IFG = 0x00;         // 初始化中断标志位
+     41          //  EA = 1; 
+     42          //}
+     43          
+     44          //uint8 readKeyPress(void)
+     45          //{
+     46          //  uint8 key = 0;
+     47          //  
+     48          //  if(P0_0==0)
+     49          //  {
+     50          //    key |= 0x01;
+     51          //  }
+     52          //  else
+     53          //  {
+     54          //    key &= ~0x01;
+     55          //  }
+     56          //  
+     57          //  if(P0_1==0)
+     58          //  {
+     59          //    key |= 0x02;
+     60          //  }
+     61          //  else
+     62          //  {
+     63          //    key &= ~0x02;
+     64          //  }
+     65          //  
+     66          //  return key;
+     67          //}
+     68          
+     69           /**************************************************************************************************
+     70          * @fn      halKeyPort0Isr
+     71          *
+     72          * @brief   Port0 ISR
+     73          *
+     74          * @param
+     75          *
+     76          * @return
+     77          **************************************************************************************************/
+     78          //HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR )
+     79          //{
+     80          //  HAL_ENTER_ISR()
+     81          ////  P0SEL |= 0x0C;        //串口IO处理
+     82          //
+     83          //  if(key_event)osal_start_timerEx( key_rspTaskID, key_event,key_time);
+     84          //  
+     85          //  //清中断标志
+     86          //  P0IFG = 0;             
+     87          //  P0IF = 0;           
+     88          //  HAL_EXIT_ISR();
+     89          //}
+     90          
+     91          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     92          void uartInit( uint8 buad, halUARTCBack_t serialCallBack )
+   \                     uartInit:
+     93          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 29
+   \   000005   74E3         MOV       A,#-0x1d
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+     94            halUARTCfg_t uartConfig;
+     95          
+     96            // configure UART
+     97            uartConfig.configured           = TRUE;
+   \   00000A   85..82       MOV       DPL,?XSP + 0
+   \   00000D   85..83       MOV       DPH,?XSP + 1
+   \   000010   7401         MOV       A,#0x1
+   \   000012   F0           MOVX      @DPTR,A
+     98            uartConfig.baudRate             = buad;
+   \   000013   12....       LCALL     ?XSTACK_DISP0_8
+   \   000016   E9           MOV       A,R1
+   \   000017   F0           MOVX      @DPTR,A
+     99            uartConfig.flowControl          = FALSE;
+   \   000018   7402         MOV       A,#0x2
+   \   00001A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00001D   E4           CLR       A
+   \   00001E   F0           MOVX      @DPTR,A
+    100            uartConfig.flowControlThreshold = 64;
+   \   00001F   7403         MOV       A,#0x3
+   \   000021   12....       LCALL     ?XSTACK_DISP0_8
+   \   000024   7440         MOV       A,#0x40
+   \   000026   F0           MOVX      @DPTR,A
+   \   000027   A3           INC       DPTR
+   \   000028   E4           CLR       A
+   \   000029   F0           MOVX      @DPTR,A
+    101            uartConfig.rx.maxBufSize        = 255;
+   \   00002A   740A         MOV       A,#0xa
+   \   00002C   12....       LCALL     ?XSTACK_DISP0_8
+   \   00002F   74FF         MOV       A,#-0x1
+   \   000031   F0           MOVX      @DPTR,A
+   \   000032   A3           INC       DPTR
+   \   000033   E4           CLR       A
+   \   000034   F0           MOVX      @DPTR,A
+    102            uartConfig.tx.maxBufSize        = 255;
+   \   000035   7412         MOV       A,#0x12
+   \   000037   12....       LCALL     ?XSTACK_DISP0_8
+   \   00003A   74FF         MOV       A,#-0x1
+   \   00003C   F0           MOVX      @DPTR,A
+   \   00003D   A3           INC       DPTR
+   \   00003E   E4           CLR       A
+   \   00003F   F0           MOVX      @DPTR,A
+    103            uartConfig.idleTimeout          = 6;
+   \   000040   7405         MOV       A,#0x5
+   \   000042   12....       LCALL     ?XSTACK_DISP0_8
+   \   000045   7406         MOV       A,#0x6
+   \   000047   F0           MOVX      @DPTR,A
+    104            uartConfig.intEnable            = TRUE;
+   \   000048   7416         MOV       A,#0x16
+   \   00004A   12....       LCALL     ?XSTACK_DISP0_8
+   \   00004D   7401         MOV       A,#0x1
+   \   00004F   F0           MOVX      @DPTR,A
+    105            uartConfig.callBackFunc         = serialCallBack;
+   \   000050   741B         MOV       A,#0x1b
+   \   000052   12....       LCALL     ?XSTACK_DISP0_8
+   \   000055   EA           MOV       A,R2
+   \   000056   F0           MOVX      @DPTR,A
+   \   000057   A3           INC       DPTR
+   \   000058   EB           MOV       A,R3
+   \   000059   F0           MOVX      @DPTR,A
+    106          
+    107            // start UART
+    108            // Note: Assumes no issue opening UART port.
+    109            (void)HalUARTOpen( 0, &uartConfig );
+   \   00005A                ; Setup parameters for call to function HalUARTOpen
+   \   00005A   AA..         MOV       R2,?XSP + 0
+   \   00005C   AB..         MOV       R3,?XSP + 1
+   \   00005E   7900         MOV       R1,#0x0
+   \   000060   12....       LCALL     `??HalUARTOpen::?relay`; Banked call to: HalUARTOpen
+    110          
+    111            return;
+   \   000063   741D         MOV       A,#0x1d
+   \   000065   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000068   80..         SJMP      ??Subroutine1_0
+    112          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine1_0:
+   \   000000   7F01         MOV       R7,#0x1
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+    113          
+    114          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    115          void printDebugString( char *str )
+   \                     printDebugString:
+   \   000000                REQUIRE ?Subroutine0
+   \   000000                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+    116          {
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV       A,R2
+   \   000006   FE           MOV       R6,A
+   \   000007   EB           MOV       A,R3
+   \   000008   FF           MOV       R7,A
+    117            HalUARTWrite(0,str,osal_strlen(str)); 
+                                  ^
+Warning[Pe167]: argument of type "char *" is incompatible with parameter of
+          type "uint8 *"
+   \   000009                ; Setup parameters for call to function HalUARTWrite
+   \   000009                ; Setup parameters for call to function osal_strlen
+   \   000009                ; Setup parameters for call to function HalUARTWrite
+   \   000009                ; Setup parameters for call to function osal_strlen
+   \   000009   12....       LCALL     `??osal_strlen::?relay`; Banked call to: osal_strlen
+   \   00000C   EA           MOV       A,R2
+   \   00000D   FC           MOV       R4,A
+   \   00000E   EB           MOV       A,R3
+   \   00000F   FD           MOV       R5,A
+   \   000010   EE           MOV       A,R6
+   \   000011   FA           MOV       R2,A
+   \   000012   EF           MOV       A,R7
+   \   000013   FB           MOV       R3,A
+   \   000014   7900         MOV       R1,#0x0
+   \   000016   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+    118          }
+   \   000019                REQUIRE ??Subroutine1_0
+   \   000019                ; // Fall through to label ??Subroutine1_0
+    119          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    120          void printDebugStringNum( char *str, uint16 num )
+   \                     printDebugStringNum:
+    121          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 15
+   \   000005   74F1         MOV       A,#-0xf
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+   \   00000A   EA           MOV       A,R2
+   \   00000B   FE           MOV       R6,A
+   \   00000C   EB           MOV       A,R3
+   \   00000D   FF           MOV       R7,A
+   \   00000E   8C..         MOV       ?V0,R4
+   \   000010   8D..         MOV       ?V1,R5
+    122            char buf[15];
+    123            
+    124            HalUARTWrite(0,str,osal_strlen(str)); 
+                                  ^
+Warning[Pe167]: argument of type "char *" is incompatible with parameter of
+          type "uint8 *"
+   \   000012                ; Setup parameters for call to function osal_strlen
+   \   000012   12....       LCALL     `??osal_strlen::?relay`; Banked call to: osal_strlen
+   \   000015   8A..         MOV       ?V2,R2
+   \   000017   8B..         MOV       ?V3,R3
+   \   000019   AC..         MOV       R4,?V2
+   \   00001B   AD..         MOV       R5,?V3
+   \   00001D                ; Setup parameters for call to function HalUARTWrite
+   \   00001D   EE           MOV       A,R6
+   \   00001E   FA           MOV       R2,A
+   \   00001F   EF           MOV       A,R7
+   \   000020   FB           MOV       R3,A
+   \   000021   7900         MOV       R1,#0x0
+   \   000023   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+    125            sprintf(buf,"%d - %x\n",num,num);
+   \   000026                ; Setup parameters for call to function sprintf
+   \   000026   78..         MOV       R0,#?V0
+   \   000028   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00002B   78..         MOV       R0,#?V0
+   \   00002D   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000030   7C..         MOV       R4,#`?<Constant "%d - %x\\n">` & 0xff
+   \   000032   7D..         MOV       R5,#(`?<Constant "%d - %x\\n">` >> 8) & 0xff
+   \   000034   7404         MOV       A,#0x4
+   \   000036   12....       LCALL     ?XSTACK_DISP101_8
+   \   000039   12....       LCALL     `??sprintf::?relay`; Banked call to: sprintf
+   \   00003C   7404         MOV       A,#0x4
+   \   00003E   12....       LCALL     ?DEALLOC_XSTACK8
+    126            HalUARTWrite(0,buf,osal_strlen(buf)); 
+                                  ^
+Warning[Pe167]: argument of type "char *" is incompatible with parameter of
+          type "uint8 *"
+   \   000041                ; Setup parameters for call to function osal_strlen
+   \   000041   AA..         MOV       R2,?XSP + 0
+   \   000043   AB..         MOV       R3,?XSP + 1
+   \   000045   12....       LCALL     `??osal_strlen::?relay`; Banked call to: osal_strlen
+   \   000048   8A..         MOV       ?V0,R2
+   \   00004A   8B..         MOV       ?V1,R3
+   \   00004C   AC..         MOV       R4,?V0
+   \   00004E   AD..         MOV       R5,?V1
+   \   000050                ; Setup parameters for call to function HalUARTWrite
+   \   000050   AA..         MOV       R2,?XSP + 0
+   \   000052   AB..         MOV       R3,?XSP + 1
+   \   000054   7900         MOV       R1,#0x0
+   \   000056   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+    127          }
+   \   000059   740F         MOV       A,#0xf
+   \   00005B   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00005E   7F04         MOV       R7,#0x4
+   \   000060   02....       LJMP      ?BANKED_LEAVE_XDATA
+    128          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    129          void printResString( char *str )
+   \                     printResString:
+   \   000000   02....       LJMP      ?Subroutine0 & 0xFFFF
+    130          {
+    131            HalUARTWrite(0,str,osal_strlen(str)); 
+                                  ^
+Warning[Pe167]: argument of type "char *" is incompatible with parameter of
+          type "uint8 *"
+    132          }
+    133          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    134          void printInt( unsigned int PrintInt )
+   \                     printInt:
+    135          {
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 2
+   \   000004   74FE         MOV       A,#-0x2
+   \   000006   12....       LCALL     ?ALLOC_XSTACK8
+    136            unsigned char PrintChar[2];
+    137          //  PrintChar[0]  = PrintInt/10000;
+    138          //  PrintChar[1]  = PrintInt/1000%10;
+    139          //  PrintChar[2]  = PrintInt/100%10;
+    140          //  PrintChar[3]  = PrintInt/10%10;
+    141          //  PrintChar[4]  = PrintInt%10;
+    142          
+    143            PrintChar[0] = (PrintInt>>8) & 0x00ff;
+   \   000009   EB           MOV       A,R3
+   \   00000A   85..82       MOV       DPL,?XSP + 0
+   \   00000D   85..83       MOV       DPH,?XSP + 1
+   \   000010   F0           MOVX      @DPTR,A
+    144            PrintChar[1] = PrintInt & 0x00ff;
+   \   000011   7401         MOV       A,#0x1
+   \   000013   12....       LCALL     ?XSTACK_DISP0_8
+   \   000016   EA           MOV       A,R2
+   \   000017   F0           MOVX      @DPTR,A
+    145            HalUARTWrite(0,PrintChar,2); 
+   \   000018                ; Setup parameters for call to function HalUARTWrite
+   \   000018   7C02         MOV       R4,#0x2
+   \   00001A   7D00         MOV       R5,#0x0
+   \   00001C   AA..         MOV       R2,?XSP + 0
+   \   00001E   AB..         MOV       R3,?XSP + 1
+   \   000020   7900         MOV       R1,#0x0
+   \   000022   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+    146          }
+   \   000025   7402         MOV       A,#0x2
+   \   000027   12....       LCALL     ?DEALLOC_XSTACK8
+   \   00002A   D083         POP       DPH
+   \   00002C   D082         POP       DPL
+   \   00002E   02....       LJMP      ?BRET
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "%d - %x\\n">`:
+   \   000000   2564202D     DB "%d - %x\012"
+   \            2025780A
+   \            00      
+    147          
+    148          
+    149          
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      0      9   printDebugString
+        0      9   -> HalUARTWrite
+        0      9   -> osal_strlen
+      0     31   printDebugStringNum
+        0     27   -> HalUARTWrite
+        0     27   -> osal_strlen
+        0     31   -> sprintf
+      3      2   printInt
+        2      2   -> HalUARTWrite
+      0      9   printResString
+        0      9   -> HalUARTWrite
+        0      9   -> osal_strlen
+      1     38   uartInit
+        0     38   -> HalUARTOpen
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       9  ?<Constant "%d - %x\n">
+       5  ??Subroutine1_0
+      25  ?Subroutine0
+       0  printDebugString
+      99  printDebugStringNum
+      49  printInt
+       3  printResString
+     106  uartInit
+      30  -- Other
+
+ 
+ 287 bytes in segment BANKED_CODE
+  30 bytes in segment BANK_RELAYS
+   9 bytes in segment XDATA_ROM_C
+ 
+  30 bytes of CODE     memory
+   9 bytes of CONST    memory
+ 287 bytes of HUGECODE memory
+
+Errors: none
+Warnings: 4
